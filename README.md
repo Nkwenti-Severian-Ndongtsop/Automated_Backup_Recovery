@@ -7,9 +7,9 @@
 
 To achieve this successfully, you need the following :
 
-- clone this repository
+- To clone this repository
 - Multipass instance
-- Docker container
+- A running docker container
 
 You can install your multipass and run an instance using
 ```sh
@@ -30,7 +30,7 @@ You now run the command
 ```
 sudo docker pull ubuntu
 ```
-ubuntu is an image found on the dockerhub website, that supports bash shell environment.
+ubuntu is a docker image found on the dockerhub website, that supports bash shell environment.
 
 Now you need to clone the repository containing the scripts and the Docker file 
 
@@ -74,7 +74,7 @@ Now run this to make the scripts executable
 ```
 chmod +x back_up.sh && chmod +x recover.sh
 ```
-you can execute the **back_up.sh** and then **recover.sh**\
+You can execute the **back_up.sh** and then **recover.sh**\
 You can check the logs after each execution\
 
 ```
@@ -97,10 +97,10 @@ you can help me evaluate the process based on this and drop any issue encountere
 >4. Create a recovery script to extract the backup and restore the files to their original location.
 >5. Log all backup and recovery actions for later review.
 
-## for the cron job
+## For the cron job
 
 You will create you cron job in the Automated backup directory before building the image\
 always use the name **crontab** for the file because it was reference in the Docker file\
 then it will be executed in the docker container, after you have build and ran the container
 
-i used a file that runs backup everyday.
+We used a file that runs backup everyday.
