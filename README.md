@@ -23,7 +23,7 @@ multipass list
 Now you need to access this instance using this command:
 
 ```
-multipass shell ubuntu
+multipass shell ubuntu-vm
 ```
 
 You now run the command
@@ -42,7 +42,7 @@ sudo apt update && sudo apt install git -y && git clone https://github.com/Nkwen
 Next you need to cd into the **Automated_Backup_Recovery** directory and build the docker file\
 this file copies the two directories to the container 
 
-use this command to build he file:
+use this command to build the file:
 
 ```
 cd Automated_Backup_Recovery/ && sudo docker build -t test-image .
@@ -83,7 +83,7 @@ You can check the logs after each execution\
 ```
 ./recover.sh
 ```
-\<directory> is the full path of the directory to be back_up
+\<directory> is the full path of the directory to be back_up, in our case is **/home/ubuntu/test/**
 
 
 the backup_folder is found in the /home/ubuntu/backup_folder\
@@ -99,8 +99,8 @@ you can help me evaluate the process based on this and drop any issue encountere
 
 ## for the cron job
 
-You will create you cron job in the Automated backup directory\
+You will create you cron job in the Automated backup directory before building the image\
 always use the name **crontab** for the file because it was reference in the Docker file\
-then it will be executed in the docker container, after you have build and ran a container
+then it will be executed in the docker container, after you have build and ran the container
 
 i used a file that runs backup everyday.
