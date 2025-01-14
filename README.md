@@ -103,4 +103,14 @@ You will create you cron job in the Automated backup directory before building t
 always use the name **crontab** for the file because it was reference in the Docker file\
 then it will be executed in the docker container, after you have build and ran the container
 
-We used a file that runs backup everyday.
+We used a file that runs backup every 2 minutes
+
+To activate it you run
+```
+apt install nano && crontab -e
+```
+
+then press **ctrl o** and **enter** 
+and also **ctrl x** to save and start the cron job 
+
+you can wait for about 2 minutes and check the logs
