@@ -16,6 +16,9 @@ COPY . /home/ubuntu/
 # move job to the cron.d
 RUN mv /home/ubuntu/crontab /etc/cron.d/
 
+# give the file execute permission
+RUN chmod +x /etc/cron.d/crontab
+
 # apply the cron job
 RUN crontab /etc/cron.d/crontab
 
