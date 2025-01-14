@@ -105,6 +105,11 @@ then it will be executed in the docker container, after you have build and ran t
 
 We used a file that runs backup every 2 minutes
 
+run:
+```
+crontab /etc/cron.d/crontab && cron
+```
+
 To activate it you run
 ```
 apt install nano && crontab -e
@@ -112,5 +117,6 @@ apt install nano && crontab -e
 
 then press **ctrl o** and **enter** 
 and also **ctrl x** to save and start the cron job 
+
 
 you can wait for about 2 minutes and check the logs
