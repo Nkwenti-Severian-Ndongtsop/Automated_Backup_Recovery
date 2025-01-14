@@ -2,11 +2,6 @@
 
 # Prompt the user to enter the absolute path of the directory
 # echo "Enter the absolute path of the directory: " 
-# read directory
-if [ -z "$1" ]; then
-  $1=/home/ubuntu/test/
-fi
-
 
 # Check if the directory exists
 if [ ! -d "$1" ]; then
